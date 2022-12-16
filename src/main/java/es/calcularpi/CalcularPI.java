@@ -14,7 +14,7 @@ public class CalcularPI {
         MathContext mc = new MathContext(10);         
         //meter en el método compute
         BigDecimal pi = new BigDecimal(0);
-         final int NUM_DIG = 10;
+         final int NUM_DIG = 10;   //Selecciono solamente el número, refactor y le doy a variable
         BigDecimal limit = new BigDecimal(1).movePointLeft(NUM_DIG);
         boolean stop = false;
         for (int k = 0; !stop; k++) {
@@ -53,4 +53,5 @@ public class CalcularPI {
         return piK;
     }
      
+    
 }
