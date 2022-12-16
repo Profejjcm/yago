@@ -12,9 +12,13 @@ public class CalcularPI {
 
      public static void main(String[] args) {
         MathContext mc = new MathContext(10);         
+        compute(mc);
+    }
+//Selecciono el codigo y le doy a refactor>introduce>metodo
+    public static void compute(MathContext mc) {
         //meter en el método compute
         BigDecimal pi = new BigDecimal(0);
-         final int NUM_DIG = 10;   //Selecciono solamente el número, refactor y le doy a variable
+        final int NUM_DIG = 10;   //Selecciono solamente el número, refactor y le doy a variable
         BigDecimal limit = new BigDecimal(1).movePointLeft(NUM_DIG);
         boolean stop = false;
         for (int k = 0; !stop; k++) {
