@@ -14,7 +14,8 @@ public class CalcularPI {
         MathContext mc = new MathContext(10);         
         //meter en el método compute
         BigDecimal pi = new BigDecimal(0);
-        BigDecimal limit = new BigDecimal(1).movePointLeft(10);
+         final int NUM_DIG = 10;
+        BigDecimal limit = new BigDecimal(1).movePointLeft(NUM_DIG);
         boolean stop = false;
         for (int k = 0; !stop; k++) {
             BigDecimal piK = piFunction(k, mc);
@@ -28,7 +29,6 @@ public class CalcularPI {
         //meter en el método compute
     }
 
-        //Selecciono el código, función refactor, introduce y le doy a metodo creando uno público.
     public static BigDecimal piFunction(int k, MathContext mc) {
         //meter en el método piFunction
         int k8 = 8 * k;
@@ -52,10 +52,5 @@ public class CalcularPI {
         BigDecimal piK = val;
         return piK;
     }
-     
-}
-   
-
-    
      
 }
